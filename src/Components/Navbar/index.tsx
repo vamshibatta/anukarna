@@ -15,7 +15,7 @@ function Navbar() {
         { value: 'others', label: 'Others' },
       ];
     const customStyles = {
-        option: (provided, state) => ({
+        option: (provided:any, state:any) => ({
             ...provided,
             color: 'black',
             backgroundColor: state.isSelected ? 'lightblue' : 'white',
@@ -26,17 +26,15 @@ function Navbar() {
             borderRadius: '10px 0px 0px 10px',
             paddingRight: '4px'
         }),
-        singleValue: (provided, state) => {
+        singleValue: (provided: any, state:any) => {
             const opacity = state.isDisabled ? 0.5 : 1;
             const transition = 'opacity 300ms';
 
             return { ...provided, opacity, transition };
         }
     }
-    const handleChange = (selectedOption) => {
-        setSeletedOption(selectedOption, () =>
-            console.log(`Option selected:`, this.state.selectedOption)
-        );
+    const handleChange = (selectedOption:any) => {
+        setSeletedOption(selectedOption);
     };
   return (
     <div className="nav-bar">
