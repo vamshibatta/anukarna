@@ -1,9 +1,9 @@
 import './HomePage.css';
+import image from '../Images/logo.png';
 
 function HomePage() {
   return (
     <div className="HomePage">
-        <p>hello world!</p>
     </div>
   );
 }

@@ -1,168 +1,47 @@
-.container{
-    max-width: 1000px;
+.fixed-nav{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+}
+
+.logo-cover{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    background-color: burlywood;
+    height: 32vh;
     margin: 0 auto;
 }
 
-.nav-bar{
-    background-color: #240d0d;
+#logo-cover-img{
+   height: 28vh;
+   width: 100%;
+   padding: 1vh 0vh;
 }
 
-.top-bar{
-    padding: 20px 30px;
+.transparent{
+    height: 30vh;
+    background-color: transparent;
 }
 
-.top-bar-list{
-    font-weight: 600;
-    font-size: 13px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    color: #a6a6a6;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.top-bar-item{
-    padding: 0px 13px;
-    border-right: 0.5px solid #a6a6a6;
-    cursor: pointer;
-}
-
-.top-bar-item:hover{
-    color:#f9b002;
-}
-
-.top-bar-item:first-child{
-    border-right: none;
-}
-
-.mid-bar-main{
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
-    width: 100%;
-}
-
-.mid-bar{
-    background-color: #f3c353;
-    position: relative;
-}
-
-.mid-bar::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    right: 0;
-    background-repeat: repeat;
-    height: 16px;
-    background-size: 15px 20px;
-    background-image: linear-gradient( 157deg, #f3c353 37%, transparent 37%), linear-gradient( 202deg, #f3c353 37%, transparent 37%);
-}
-
-.logo-div{
-    padding: 5px 0px;
-    width: 25%;
-}
-
-.logo{
-    width: 180px;
-    height: auto;
-}
-
-.search{
-    display: flex;
-    width: 55%;
-}
-
-.drop-down{
-    width: 25%;
-    border: none;
-    border-radius: 0px;
-}
-
-.drop-down-input{
-    width: 50%;
-    border: none;
-}
-
-.drop-down-input:focus-visible{
-    outline: none;
-}
-
-.search-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    background-color: #240d0d;
-    color: white;
-    border:none;
-    border-radius: 0px 10px 10px 0px;
-}
-
-.my-cart{
-    width:20%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
-.my-cart-details{
+.sub-nav{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 10px;
+    margin-top: -2px;
     background-color: white;
-    border-radius: 0px 5px 5px 0px;
-    padding:12px 12px 11px 0px;
-    font-size: 13px;
-    cursor: pointer;
+    box-shadow: 0 -5px 5px -5px gray;
+    border-bottom: 0.5px solid gray;
 }
 
-.my-cart-title{
-    font-size: 18px;
-    font-weight: 800;
-    color: maroon;
+.desc{
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
-.my-cart-sub-title{
-    font-size: 12px;
-    color: rgb(172, 167, 167);
-    font-weight: 500;
-}
-
-.my-cart-logo{
-    background-color: white;
-    color: green;
-    padding: 10% 12px 10% 12px;
-    border-radius: 5px 0px 0px 5px;
-    cursor: pointer;
-}
-
-.bottom-bar{
-    background-color: #240d0d;
-    color: gainsboro;
+.address{
     font-size: 14px;
-}
-
-.bottom-bar-list{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.bottom-bar-item{
-    padding: 12px 5px;
-    cursor: pointer;
-}
-
-.selected{
-    color: goldenrod;
-}
-
-.bottom-bar-item:hover{
-    color: #f3c353;
-}
-
-.bottom-bar-item:first-child{
-    padding-left:0px;
+    color: gray;
 }

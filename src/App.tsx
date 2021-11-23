@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ProductList from './Pages/ProductList';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
           <Route exact path="/">
             <HomePage/>
           </Route>
-          <Route path="/new-products">
-            <p>Under construction!!</p>
+          <Route path="/products/:category">
+            <ProductList/>
           </Route>
         </Switch>
       </Router>
