@@ -1,0 +1,20 @@
+.footer-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    margin:0;
+    padding: 0 5rem 2rem 5rem;
+    background-color:rgba(232, 122, 4, 1);
+    color: white;
+}
+.menu-list{
+    font-size: 18px;
+    margin-top:0.9rem;
+}
+.menu-list p{
+    margin-top:7px;
+    cursor: pointer;
+}
+.menu-list p:hover{
+    color:lightgray;
+}

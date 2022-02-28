@@ -1,0 +1,102 @@
+.container{
+    padding-bottom: 2rem;
+}
+.main-container{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0.5rem 10% 1rem 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 10% 1rem 10%;
+}
+.categories .op{
+    font-size:20px;
+    font-weight: bold;
+}
+.categories select{
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    background:white;
+    box-shadow: 0px 1px 3px;
+}
+option{
+    cursor: pointer;
+}
+
+
+.product-card{
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease;
+    border-radius: 5px;
+    background: white;
+}
+.product-card:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.product-image img{
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+.product-price{
+    margin-top: 0.5rem;
+    font-weight: bold;
+} 
+
+
+.product-content{
+    margin: 1rem;
+    margin-top: 0.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.product-title{
+    margin-bottom: 0.5rem;
+}
+
+
+.product-btn {
+    display: flex;
+    justify-content: space-around;
+}
+.product-btn button {
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: rgba(232, 122, 4, 1);
+    color: #f4f4f4;
+    border: none;
+    transition: 0.1s;
+    /* margin-bottom: 0.5rem; */
+    /* border-radius: 5px; */
+    font-weight: bold;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.product-btn button:hover{
+    transform: scale(1.1);
+    /* background: lightgray; */
+}
+

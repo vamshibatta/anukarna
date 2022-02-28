@@ -1,47 +1,54 @@
-.fixed-nav{
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    z-index: 2;
-    background-color: white;
+div.two-bars{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    position: sticky;
+    top:0;
+    box-shadow: 0px 0px 10px -5px;
+}
+.NavbarItems {
+    background-color: rgba(232, 122, 4, 1);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right:5%;
+    font-size: 1.2rem ;
 }
 
-.logo-cover{
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    background-color: burlywood;
-    height: 32vh;
-    margin: 0 auto;
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.logo-name {
+    display: flex;
+    /* margin-left: 0.5rem; */
+    font-size: 28px;
+}
+.navbar-logo:hover{
+   color: rgba(230, 224, 224, 0.926);
 }
 
-#logo-cover-img{
-   height: 28vh;
-   width: 100%;
-   padding: 1vh 0vh;
+.nav-components {
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
 }
-
-.transparent{
-    height: 30vh;
-    background-color: transparent;
+.cart, .login, .signup{
+    display:flex;
 }
-
-.sub-nav{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 20px 10px;
-    margin-top: -2px;
-    background-color: white;
-    box-shadow: 0 -5px 5px -5px gray;
-    border-bottom: 0.5px solid gray;
+.nav-components div{
+    cursor: pointer;
+    margin: 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
 }
-
-.desc{
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.address{
-    font-size: 14px;
-    color: gray;
+.nav-components div:hover{
+    color:rgba(230, 224, 224, 0.926);
 }
