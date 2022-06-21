@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './Carousel.css';
-// import { FaArrowAltCircleLeft ,FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Carousel = ({ slides }: { slides: any }) => {
 
     const [current, setCurrent] = useState(0);
     const length = slides.length;
 
-    const goRight = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
+    
     
     // const goLeft = () => {
     //     setCurrent(current === 0 ? length - 1 : current - 1);
     // };
 
     useEffect(()=>{
+        const goRight = () => {
+            setCurrent(current === length - 1 ? 0 : current + 1);
+        };
+
         setTimeout(goRight, 3000);
-    }, [current]);
+    }, [current, length]);
 
     if (!Array.isArray(slides) || length <= 0) {
         return null;
@@ -25,8 +26,6 @@ const Carousel = ({ slides }: { slides: any }) => {
 
     return (
         <div className='carousel'>
-            {/* <FaArrowAltCircleLeft className='left arrow-icon' onClick={goLeft} />
-            <FaArrowAltCircleRight className='right arrow-icon' onClick={goRight} /> */}
             {slides.map((slide, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
