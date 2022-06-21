@@ -1,0 +1,54 @@
+div.two-bars{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    position: sticky;
+    top:0;
+    box-shadow: 0px 0px 10px -5px;
+}
+.NavbarItems {
+    background-color: rgba(232, 122, 4, 1);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right:5%;
+    font-size: 1.2rem ;
+}
+
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.logo-name {
+    display: flex;
+    /* margin-left: 0.5rem; */
+    font-size: 28px;
+}
+.navbar-logo:hover{
+   color: rgba(230, 224, 224, 0.926);
+}
+
+.nav-components {
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+.cart, .login, .signup{
+    display:flex;
+}
+.nav-components div{
+    cursor: pointer;
+    margin: 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.nav-components div:hover{
+    color:rgba(230, 224, 224, 0.926);
+}
