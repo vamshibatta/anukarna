@@ -14,7 +14,7 @@ export const CarouselData = [
         category: 'Savoury Bites'
     },
     {
-        item:'Chicken pickle',
+        item:'Chicken Pickle',
         images:'https://img.onmanorama.com/content/dam/mm/en/food/kerala-kitchen/images/2019/9/14/beef-pickle.jpg',
         price:'250',
         quantity:'0.25 Kg',

@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
-import { CarouselData } from '../CarouselData';
 import './ProductCard.css';
+import { useState } from 'react';
+import SingleCard from './SingleCard';
 
-interface Item{
-    item:string
-    images:string
-    price:string
-    category:string
-    quantity:string
+interface Item {
+    item: string
+    images: string
+    price: string
+    category: string
+    quantity: string
 }
 
 function ProductCard({ items }: { items: Array<Item> }) {
@@ -31,7 +31,6 @@ function ProductCard({ items }: { items: Array<Item> }) {
         }
     }
 
-    console.log(sel);
     return (
         <div className="container">
             <div className="categories">
@@ -39,12 +38,10 @@ function ProductCard({ items }: { items: Array<Item> }) {
                 <div>
                     <span>Sort By: </span>
                     <select id="catSelector" value={sel} onChange={handleFilter}>
-                        
-                        <option value="All" selected> All </option>
+                        <option value="All"> All </option>
                         <option value="Sweets"> Sweets </option>
                         <option value="Savoury Bites"> Savoury Bites </option>
                         <option value="Pickles"> Pickles </option>
-
                     </select>
                 </div>
             </div>
@@ -53,20 +50,7 @@ function ProductCard({ items }: { items: Array<Item> }) {
                 {filteredData.map((items: any) => {
 
                     return (
-                        <div className='product-card'>
-                            <div className='product-image'>
-                                <img src={items.images} alt={items.item} />
-                            </div>
-                            <div className='product-content'>
-                                <div className='product-title'>
-                                    <h3>{items.item}</h3>
-                                </div>
-                                <div className="producy-price">
-                                    <p>₹{items.price}/{items.quantity}</p>
-                                </div>
-                            </div>
-                            <div className='product-btn'> <button> ADD TO CART </button> </div>
-                        </div>
+                        <SingleCard items={items}/>
                     );
                 })
                 }

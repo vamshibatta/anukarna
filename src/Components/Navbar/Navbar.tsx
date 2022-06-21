@@ -1,16 +1,11 @@
 import { Link } from 'react-router-dom';
 import anukarna from '../../Images/logo_s-1.png';
-import Categories from './Categories/Categories';
 import './Navbar.css';
 import Searchbar from './Searchbar/Searchbar';
-import { AiOutlineShoppingCart, AiOutlineLogin } from 'react-icons/ai';
+import { AiOutlineLogin } from 'react-icons/ai';
 import { SiGnuprivacyguard } from 'react-icons/si';
 
 const Navbar = () => {
-
-    const click = () => {
-        alert("you clicked");
-    }
 
     return (
         <div className="two-bars">
@@ -25,23 +20,25 @@ const Navbar = () => {
                 </div>
                 <Searchbar />
                 <div className='nav-components'>
-                    <div className="cart">
-                        <AiOutlineShoppingCart/>
-                        <p onClick={click}>Cart</p>
+                    <div>
+                        <Link to="/signup">
+                            <div className="signup">
+                                <SiGnuprivacyguard />
+                                <p>Signup</p>
+                            </div>
+                        </Link>
                     </div>
-                    <div className="login">
-                        <AiOutlineLogin />
-                        <p onClick={click}>Login</p>
-                    </div>
-                    <div className="signup">
-                        <SiGnuprivacyguard />
-                        <p onClick={click}>Signup</p>
+                    <div>
+                        <Link to="/login">
+                            <div className="login">
+                                <AiOutlineLogin />
+                                <p>Login</p>
+                            </div>
+                        </Link>
                     </div>
                 </div>
+                
             </nav>
-            <div className="cat">
-                {/* <Categories /> */}
-            </div>
         </div>
     );
 

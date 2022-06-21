@@ -5,6 +5,10 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import SignUp from './Pages/SignUp';
+import LogIn from './Pages/LogIn';
+import Cart from './Pages/Cart';
+import SignedNavbar from './Components/Navbar/SignedNavbar';
 
 function App() {
   return (
@@ -13,6 +17,16 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage/>
+          </Route>
+          <Route path = '/login'>
+            <LogIn/>
+          </Route>
+          <Route path = '/cart'>
+            <SignedNavbar/>
+            <Cart/>
+          </Route>
+          <Route path = '/signup'>
+            <SignUp/>
           </Route>
         </Switch>
       </Router>

@@ -40,8 +40,10 @@ div.two-bars{
     justify-content: space-between;
     /* text-align: center; */
 }
-.cart, .login, .signup{
+.cart, .login, .signup, .logout, .myAccount{
     display:flex;
+    align-items: center;
+    font-size: 1.2rem;
 }
 .nav-components div{
     cursor: pointer;
