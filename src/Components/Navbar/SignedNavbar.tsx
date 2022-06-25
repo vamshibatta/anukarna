@@ -1,10 +1,11 @@
 import { Link, Redirect } from 'react-router-dom';
 import anukarna from '../../Images/logo_s-1.png';
 import './Navbar.css';
-import Searchbar from './Searchbar/Searchbar';
-import { AiOutlineShoppingCart, AiOutlineLogout } from 'react-icons/ai';
+// import Searchbar from './Searchbar/Searchbar';
 import { RiAccountCircleFill } from 'react-icons/ri';
 import { useState } from 'react';
+import { Dropdown, List } from 'antd-mobile'
+import { AiOutlineShoppingCart, AiOutlineLogout } from 'react-icons/ai';
 
 const SignedNavbar = () => {
 
@@ -28,12 +29,12 @@ const SignedNavbar = () => {
                     <Link to="/">
                         <div className='navbar-logo' >
                             <img src={anukarna} height={40} width={54} alt="AK" />
-                            <h1 className="logo-name">anukarna foods</h1>
+                            <h1 className="logo-name">Anukarna Foods</h1>
                         </div>
                     </Link>
                 </div>
-                <Searchbar />
-                <div className='nav-components'>
+                {/* <Searchbar /> */}
+                {/* <div className='nav-components'>
                     <div>
                         <Link to="/myAccount">
                             <div className="myAccount">
@@ -56,7 +57,23 @@ const SignedNavbar = () => {
                             <p>Logout</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
+
+                <Dropdown className='menu-dropdown'>
+                    <Dropdown.Item key='sorter' title={<p style={{fontSize:'20px',margin:'0px'}}>Menu</p>}>
+                        <List header='Menu'>
+                            <List.Item prefix={<RiAccountCircleFill />}>
+                            <Link to="/myAccount">{n}</Link>
+                            </List.Item>
+                            <List.Item prefix={<AiOutlineShoppingCart />}>
+                            <Link to="/cart">Cart</Link>
+                            </List.Item>
+                            <List.Item prefix={<AiOutlineLogout />} onClick={handleLogout}>
+                            logout
+                            </List.Item>
+                        </List>
+                    </Dropdown.Item>
+                </Dropdown>
 
             </nav>
         </div>

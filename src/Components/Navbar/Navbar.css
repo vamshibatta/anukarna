@@ -54,3 +54,9 @@ div.two-bars{
 .nav-components div:hover{
     color:rgba(230, 224, 224, 0.926);
 }
+
+.menu-dropdown{
+    background-color: transparent !important;
+    color: white;
+    font-size: 18px;
+}

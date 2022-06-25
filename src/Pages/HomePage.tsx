@@ -34,7 +34,11 @@ function HomePage() {
     <div className="HomePage">
       {!gotToken && <Navbar />}
       {gotToken && <SignedNavbar />}
-      <Carousel slides={CarouselData} />
+      {
+        window.innerWidth>800?(
+          <Carousel slides={CarouselData} />
+        ):null
+      }
       <ProductCard items={CarouselData} />
       <Footer />
     </div>

@@ -9,6 +9,7 @@ import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
 import Cart from './Pages/Cart';
 import SignedNavbar from './Components/Navbar/SignedNavbar';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 function App() {
   return (

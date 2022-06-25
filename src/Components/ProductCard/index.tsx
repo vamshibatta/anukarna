@@ -1,6 +1,7 @@
 import './ProductCard.css';
 import { useState } from 'react';
 import SingleCard from './SingleCard';
+import { Col, Row } from 'antd';
 
 interface Item {
     item: string
@@ -33,27 +34,56 @@ function ProductCard({ items }: { items: Array<Item> }) {
 
     return (
         <div className="container">
-            <div className="categories">
-                <div className="op">Our Products</div>
-                <div>
-                    <span>Sort By: </span>
-                    <select id="catSelector" value={sel} onChange={handleFilter}>
-                        <option value="All"> All </option>
-                        <option value="Sweets"> Sweets </option>
-                        <option value="Savoury Bites"> Savoury Bites </option>
-                        <option value="Pickles"> Pickles </option>
-                    </select>
-                </div>
-            </div>
+                <Row className="categories">
+                    <Col style={{position: 'relative'}}
+                        xs={24}
+                        sm={24}
+                        md={12}
+                        lg={12}
+                        xl={12}
+                        xxl={12}
+                    >
+                        <div className='op'>Our Products</div>
+                    </Col>
+                    <Col
+                        xs={24}
+                        sm={24}
+                        md={12}
+                        lg={12}
+                        xl={12}
+                        xxl={12}
+                    >
+                        <div style={{textAlign:window.innerWidth>767?"right":"left",marginTop:window.innerWidth>767?'0px':'25px'}}>
+                            <span>Sort By: </span>
+                            <select id="catSelector" value={sel} onChange={handleFilter}>
+                                <option value="All"> All </option>
+                                <option value="Sweets"> Sweets </option>
+                                <option value="Savoury Bites"> Savoury Bites </option>
+                                <option value="Pickles"> Pickles </option>
+                            </select>
+                        </div>
+                    </Col>
+                </Row>
+                
 
             <div className="main-container">
+                <Row>
                 {filteredData.map((items: any) => {
-
                     return (
-                        <SingleCard items={items}/>
+                        <Col
+                            xs={24}
+                            sm={24}
+                            md={12}
+                            lg={8}
+                            xl={8}
+                            xxl={6}
+                        >
+                            <SingleCard items={items}/>
+                        </Col>
                     );
                 })
                 }
+                </Row>
             </div>
         </div>
     )
