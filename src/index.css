@@ -14,7 +14,7 @@ p{
 
 a{
   text-decoration: none;
-  color: inherit;
+  color: black !important;
 }
 
 code {
